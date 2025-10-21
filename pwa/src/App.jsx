@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [sondes, setSondes] = useState([]);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    useEffect(() => {
+        const fetchSondes = async () => {
+            try {
+                const response = await axios.get(
+                    `${import.meta.env.VITE_API_URL}/sondes?page=1&limit=50`
+                );
+                setSondes(response.data.data || []);
+            } catch (error) {
+                console.error("Erreur lors du chargement :", error);
+            }
+        };
+
+        fetchSondes();
+    }, []);
+
+    return (
+        <div className="container">
+            <h1>Liste des sondes</h1>
+
+            {sondes.length === 0 ? (
+                <p>Aucune sonde trouvée.</p>
+            ) : (
+                <table className="table">
+                    <thead>
+                    <tr>
+                        <th>Hauteur</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {sondes.map((sonde) => (
+                        <tr key={sonde.id}>
+                            <td>{sonde.haut}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            )}
+        </div>
+    );
 }
 
-export default App
+export default App;
