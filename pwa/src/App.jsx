@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import {registerSW} from "virtual:pwa-register";
 
 
 function App() {
@@ -19,6 +20,11 @@ function App() {
 
         fetchSondes();
     }, []);
+
+
+
+
+
 
     return (
         <div className="container">
