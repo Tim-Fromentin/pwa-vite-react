@@ -100,6 +100,4 @@ pwa/
 - `vite-plugin-singlefile`
 
 # Déploiement sur Plesk
-1. Configurer les variables d'environnement sur Plesk
-2. Déployer l'application via Git
-3. Redémarrer l'application Node.js
+1. Déployer l'application via Git

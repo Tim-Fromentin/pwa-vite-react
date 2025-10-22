@@ -1,10 +1,12 @@
 # React + Vite PWA  <!-- omit in toc -->
-# Capture
-## Light Mode
-![Light Mode](image.png)
-## Dark Mode
-![Dark Mode](image-1.png)
 #### [Voir le README](./README.md)
+### Capture
+#### Light Mode
+![Light Mode](image.png)
+#### Dark Mode
+![Dark Mode](image-1.png)
+#### En PWA
+![pwa](image-2.png)
 ## Sommaire <!-- omit in toc -->
 - [](#)
       - [Voir le README](#voir-le-readme)
@@ -17,24 +19,24 @@
 ## Objectif
 - [X] Créer un repo **GitHub**
 - [X] Créer le projet avec **ReactJS** et **Vite**
-- [ ] Configurer l'environnement
+- [X] Configurer l'environnement
     - [X] Variables d'environnement
-    - [ ] Structure du projet
-- [ ] Identifier les **écrans nécessaires** et les concevoir
+    - [X] Structure du projet
+- [x] Identifier les **écrans nécessaires** et les concevoir
 - [~] **Récupérer les données** depuis l'API et les afficher
 - [X] Rendre l'application **Progressive Web App (PWA)**
     - [X] Ajouter un `manifest.json`
     - [X] Configurer le **Service Worker**
-- [ ] Mettre en place la **gestion des erreurs**
+- [X] Mettre en place la **gestion des erreurs**
 - [X] **Tester l'application**
     - [X] En ligne
     - [X] En mode hors-ligne
-- [ ] **Documenter le projet**
+- [X] **Documenter le projet**
     - [X] Ajouter la documentation avec **JSDoc**
-    - [ ] Rédiger le **README**
-- [ ] Implémenter une **notification push** lorsque de nouvelles données arrivent (changement d'état d’un capteur)
-- [ ] Ajouter un **mode sombre**
-- [ ] **Déployer le projet sur Plesk**
+    - [X] Rédiger le **README**
+- [~] Implémenter une **notification push** lorsque de nouvelles données arrivent (changement d'état d’un capteur)
+- [X] Ajouter un **mode sombre**
+- [X] **Déployer le projet sur Plesk**
 ## Difficulté
 
 - Utilisation de la librairies vite PWA
@@ -51,3 +53,5 @@
 - Ajout d'un sytéme de cache ~0.5/1h
 - Configurations de jsdoc 0.5h
 - Création de la documentation 1h
+- - Ajout d'un mode sombres 1h
+- Déploiement sur Plesk 0.5h
