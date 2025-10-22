@@ -7,6 +7,13 @@ function App() {
     const [sondes, setSondes] = useState([]);
 
     useEffect(() => {
+        /**
+         * Récupère les sondes depuis l'API et met à jour l'état local.
+         *
+         * @async
+         * @function fetchSondes
+         * @throws {Error} Lance une erreur si la requête échoue.
+         */
         const fetchSondes = async () => {
             try {
                 const response = await axios.get(
