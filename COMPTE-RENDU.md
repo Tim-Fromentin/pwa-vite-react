@@ -1,5 +1,17 @@
-# React + Vite PWA
-/* compte rendu : temps passer, difficulter etc., objectig */
+# React + Vite PWA  <!-- omit in toc -->
+# Capture
+## Light Mode
+![Light Mode](image.png)
+## Dark Mode
+![Dark Mode](image-1.png)
+#### [Voir le README](./README.md)
+## Sommaire <!-- omit in toc -->
+- [](#)
+      - [Voir le README](#voir-le-readme)
+  - [Objectif](#objectif)
+  - [Difficulté](#difficulté)
+  - [Les étapes du projet et le temps passé](#les-étapes-du-projet-et-le-temps-passé)
+
 
 
 ## Objectif

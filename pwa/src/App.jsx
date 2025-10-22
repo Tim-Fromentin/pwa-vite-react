@@ -40,30 +40,28 @@ function App() {
         fetchSondes();
     }, []);
 
-        let mode = localStorage.getItem('mode')
+
+    const modes = localStorage.getItem('mode')
+  
     const handleCLick = () => {
-            if (mode === 'light'){
-                localStorage.setItem('mode', 'dark')
-            } else if (mode === 'dark'){
-                localStorage.setItem('mode', 'light')
-            }
+            window.location.reload();
+
+        if(modes === 'light'){
+            localStorage.setItem('mode', 'dark')
+            
+        } else if(modes === 'dark'){
+            localStorage.setItem('mode', 'light')
+        } else {
+            localStorage.setItem('mode', 'light')
+        }
     }
-    let styles = `
-      --color-bg: #ffff;
-  --color-table-thead: #f5f5f5;
-  --color-text: #333;
-  --color-table--hover: #fafafa;
-    `
-    if (mode === 'dark'){
-        styles = `
-      --color-bg: red;
-  --color-table-thead: #f5f5f5;
-  --color-text: #333;
-  --color-table--hover: #fafafa;
-    `
-    }
+        useEffect(() => {
+
+  document.documentElement.setAttribute("data-mode", modes);
+    }, [modes]);
+
     return (
-        <>
+  <main data-mod={`${modes}`}>
 
             <button onClick={handleCLick}>Mode</button>
             <h1>Liste des sondes</h1>
@@ -89,7 +87,7 @@ function App() {
                     </tbody>
                 </table>
             )}
-        </>
+        </main>
     );
 }
 

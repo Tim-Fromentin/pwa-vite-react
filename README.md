@@ -11,6 +11,7 @@
 - [Liste des plugins et dépendances](#liste-des-plugins-et-dépendances)
       - [Dépendances principales](#dépendances-principales)
       - [Dépendances de développement](#dépendances-de-développement)
+- [Déploiement sur Plesk](#déploiement-sur-plesk)
 
 
 
@@ -97,3 +98,8 @@ pwa/
 - `vite`  
 - `vite-plugin-pwa`  
 - `vite-plugin-singlefile`
+
+# Déploiement sur Plesk
+1. Configurer les variables d'environnement sur Plesk
+2. Déployer l'application via Git
+3. Redémarrer l'application Node.js

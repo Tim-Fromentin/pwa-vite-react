@@ -23,11 +23,11 @@ function initServiceWorkerAndNotifications() {
                 if (!("Notification" in window)) {
                     console.error("Notifications non supportées");
                 } else if (Notification.permission === "granted") {
-                    new Notification("Bonjour !");
+                    new Notification("Bonjour le monde !");
                 } else if (Notification.permission !== "denied") {
                     Notification.requestPermission().then(function (permission) {
                         if (permission === "granted") {
-                            new Notification("Hi there!");
+                            new Notification("Bonjour le monde !");
                         } else {
                             console.error("Permission refusée par l'utilisateur");
                         }
