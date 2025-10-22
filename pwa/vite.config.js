@@ -12,10 +12,10 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
+            urlPattern: /^https:\/\/iot\.olasserre\.dev-campus\.fr\/api\/.*/i,
+            handler: 'NetworkFirst',
             options: {
-              cacheName: 'google-fonts-cache',
+              cacheName: 'api-cache',
               expiration: {
                 maxEntries: 10,
                 maxAgeSeconds: 60 * 60 * 24 * 365,
@@ -25,8 +25,10 @@ export default defineConfig({
               },
             },
           },
+
         ],
       },
+
       manifest: {
         name: 'PWA Router',
         short_name: 'PWA Router',
